@@ -8,15 +8,12 @@ print("")
 
 for i in range(number_items):
     list_items.append({})
-    inserted_name = input("Whats is the product name?")
-    list_items[i][1] = inserted_name
-    inserted_price = float(input("Whats is the product price?"))
-    list_items[i][2] = inserted_price
-    inserted_units = int(input("How many units of the product?"))
-    list_items[i][3] = inserted_units
+    list_items[i]["name"] = input("Whats is the product name?")
+    list_items[i]["price"] = input("Whats is the product price?")
+    list_items[i]["units"] = input("How many units of the product?")
     print("")
 
 for i2 in range(number_items):
-    print(f"You added the item: {list_items[i2][1]}")
-    print(f"The price of the item {list_items[i2][1]} is: {list_items[i2][2]}")
-    print(f"The number of units of the item {list_items[i2][1]} is: {list_items[i2][3]}")
+    print("You added the item: " + list_items[i2]["name"])
+    print("The price of the item " + list_items[i2]["name"] + " is " + list_items[i2]["price"])
+    print("The number of units of the item " + list_items[i2]["name"] + " is " + list_items[i2]["units"])
